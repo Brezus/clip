@@ -19,6 +19,20 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 10px rgba(128, 128, 128, 0.384);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--Strong-Cyan);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(171, 65%, 32%);
+}
 h1,
 h2,
 .font-aws i {
@@ -254,6 +268,7 @@ svg {
     max-width: 100%;
   }
 }
+
 .myfooter {
   background-color: hsla(212, 10%, 33%, 0.1);
   padding: 3.5rem 0;
@@ -261,22 +276,33 @@ svg {
 @media screen and (min-width: 800px) {
   .myfooter {
     grid-template-columns: repeat(5, 1fr);
+    padding: 0 3rem;
     grid-template-areas: "svg fir sec reg ico";
   }
   svg.bottom {
     grid-area: svg;
+    align-self: center;
+    justify-self: center;
   }
   .fir-li {
     grid-area: fir;
+    align-self: center;
+    justify-self: center;
   }
   .sec-li {
     grid-area: sec;
+    align-self: center;
+    justify-self: center;
   }
   .reg {
     grid-area: reg;
+    align-self: center;
+    justify-self: center;
   }
   .font-aws {
     grid-area: ico;
+    align-self: center;
+    justify-self: center;
   }
 }
 li {
@@ -292,6 +318,12 @@ li {
 /* space clipboard for ios and mac os from the last logo (vector graphics) */
 .ios-mac {
   margin-top: 5.5rem;
+}
+@media screen and (min-width: 800px) {
+  .ios-mac {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 800px) {
