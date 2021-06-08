@@ -19,9 +19,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-a {
-  text-decoration: none;
-}
 h1,
 h2,
 .font-aws i {
@@ -34,10 +31,16 @@ li {
   line-height: 1.4;
   font-weight: 400;
 }
-h1 p,
-h2 p {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+p {
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.first-p {
+  margin-top: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+}
+.actions p {
+  margin: 0;
 }
 svg {
   margin-top: 2rem;
@@ -67,6 +70,7 @@ svg {
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
   width: 100%;
+  margin-top: 2rem;
 }
 .download a {
   text-decoration: none;
@@ -86,11 +90,12 @@ svg {
 .snippets {
   display: grid;
   place-items: center;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
 }
 .snippets img {
   width: 100%;
   object-fit: contain;
+  margin-bottom: 2.3rem;
 }
 .access-clipboard img {
   width: 100%;
@@ -101,7 +106,7 @@ svg {
 .fas {
   font-size: 3rem;
   opacity: 40%;
-  margin: 2.5rem 0;
+  margin: 2.9rem 0;
 }
 /* super charge section end */
 .logos {
@@ -121,4 +126,8 @@ li {
 .font-aws i {
   font-size: 2rem;
   margin-top: 1rem;
+}
+/* space clipboard for ios and mac os from the last logo (vector graphics) */
+.ios-mac {
+  margin-top: 5.5rem;
 }
