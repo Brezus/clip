@@ -34,6 +34,11 @@ li {
 p {
   margin-top: 0.8rem;
   margin-bottom: 0.5rem;
+  max-width: 600px;
+}
+.snippets__txt p {
+  max-width: 380px;
+  /* padding-right: 5rem; */
 }
 .first-p {
   margin-top: 1.5rem;
@@ -55,6 +60,17 @@ svg {
   grid-gap: 7rem;
   text-align: center;
 }
+@media screen and (min-width: 700px) {
+  .grid {
+    display: grid;
+    padding: 8rem 0rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: max-content;
+    grid-gap: 7rem;
+    text-align: center;
+  }
+}
 .top {
   display: grid;
   place-items: center;
@@ -65,12 +81,31 @@ svg {
   place-items: center;
   row-gap: 1rem;
 }
+
+@media screen and (min-width: 700px) {
+}
+.same {
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+}
+/* .right p {
+  max-width: 600px;
+} */
 .download {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
   width: 100%;
   margin-top: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .download {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem auto;
+  }
 }
 .download a {
   text-decoration: none;
@@ -83,8 +118,18 @@ svg {
 .download a:first-child {
   background-color: var(--Strong-Cyan);
 }
+@media screen and (min-width: 700px) {
+  .download a:first-child {
+    flex: 1;
+  }
+}
 .download a:last-child {
   background-color: var(--Light-Blue);
+}
+@media screen and (min-width: 700px) {
+  .download a:last-child {
+    flex: 1;
+  }
 }
 /* second section start */
 .snippets {
@@ -92,10 +137,38 @@ svg {
   place-items: center;
   grid-gap: 0.5rem;
 }
+@media screen and (min-width: 700px) {
+  .flex {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    width: 100%; */
+    display: flex;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 700px) {
+  .snippets__txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 700px) {
+  .snip {
+    padding-left: 3rem;
+  }
+}
 .snippets img {
   width: 100%;
   object-fit: contain;
   margin-bottom: 2.3rem;
+}
+@media screen and (min-width: 700px) {
+  .snippets img {
+    margin-left: -6rem;
+    width: 50%;
+  }
 }
 .access-clipboard img {
   width: 100%;
