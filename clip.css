@@ -199,27 +199,44 @@ svg {
       "... one  ...."
       "two three four";
     grid-column-gap: 2rem;
+    padding: 0 4rem;
   }
 }
 
 @media screen and (min-width: 700px) {
   .one {
     grid-area: one;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
   .two {
     grid-area: two;
-    align-self: center;
+    align-self: start;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
   .three {
     grid-area: three;
-    align-self: center;
+    align-self: start;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
   .four {
     grid-area: four;
-    align-self: center;
+    align-self: start;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
 }
 /* grid for super charged workflow end */
@@ -231,6 +248,7 @@ svg {
 @media screen and (min-width: 800px) {
   .logos {
     grid-template-columns: repeat(5, 1fr);
+    padding: 0 2rem;
   }
   .logos img {
     max-width: 100%;
@@ -245,7 +263,7 @@ svg {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "svg fir sec reg ico";
   }
-  svg {
+  svg.bottom {
     grid-area: svg;
   }
   .fir-li {
