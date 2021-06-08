@@ -145,6 +145,8 @@ svg {
     width: 100%; */
     display: flex;
     text-align: left;
+
+    margin-left: -10%;
   }
 }
 @media screen and (min-width: 700px) {
@@ -157,6 +159,7 @@ svg {
 @media screen and (min-width: 700px) {
   .snip {
     padding-left: 3rem;
+    /* border: 2px solid black; */
   }
 }
 .snippets img {
@@ -166,13 +169,18 @@ svg {
 }
 @media screen and (min-width: 700px) {
   .snippets img {
-    margin-left: -6rem;
-    width: 50%;
+    margin-left: -9%;
+    width: 65%;
   }
 }
 .access-clipboard img {
   width: 100%;
   object-fit: contain;
+}
+@media screen and (min-width: 700px) {
+  .access-clipboard img {
+    width: 65%;
+  }
 }
 /* third section end */
 .far,
@@ -181,6 +189,40 @@ svg {
   opacity: 40%;
   margin: 2.9rem 0;
 }
+/* grid for super charged workflow start */
+@media screen and (min-width: 700px) {
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "... one  ...."
+      "two three four";
+    grid-column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .one {
+    grid-area: one;
+  }
+  .two {
+    grid-area: two;
+    align-self: center;
+    justify-self: center;
+  }
+  .three {
+    grid-area: three;
+    align-self: center;
+    justify-self: center;
+  }
+  .four {
+    grid-area: four;
+    align-self: center;
+    justify-self: center;
+  }
+}
+/* grid for super charged workflow end */
 /* super charge section end */
 .logos {
   display: grid;
