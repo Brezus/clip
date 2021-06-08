@@ -15,9 +15,12 @@
 body {
   font-size: 1.125rem;
   font-family: "Bai Jamjuree", sans-serif;
-  background-image: url(/clipboard-landing-page-master/bg-header-mobile.png);
+  background-image: url(bg-header-mobile.png);
   background-repeat: no-repeat;
   background-size: contain;
+}
+a {
+  text-decoration: none;
 }
 h1,
 h2,
@@ -114,4 +117,8 @@ li {
 }
 .font-aws i:nth-child(2) {
   padding: 0 2rem;
+}
+.font-aws i {
+  font-size: 2rem;
+  margin-top: 1rem;
 }
