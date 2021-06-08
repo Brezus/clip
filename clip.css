@@ -19,20 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-::-webkit-scrollbar {
-  width: 15px;
-}
-::-webkit-scrollbar-track {
-  border-radius: 5px;
-  box-shadow: inset 0px 0px 10px rgba(128, 128, 128, 0.384);
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: var(--Strong-Cyan);
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(171, 65%, 32%);
-}
+
 h1,
 h2,
 .font-aws i {
@@ -277,19 +264,22 @@ svg {
   .myfooter {
     grid-template-columns: repeat(5, 1fr);
     padding: 0 3rem;
-    grid-template-areas: "svg fir sec reg ico";
+    grid-template-areas: "svg btm ico";
   }
   svg.bottom {
     grid-area: svg;
     align-self: center;
     justify-self: center;
   }
-  .fir-li {
-    grid-area: fir;
+  .bottomlist {
+    grid-area: btm;
     align-self: center;
     justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 4rem;
   }
-  .sec-li {
+  /* .sec-li {
     grid-area: sec;
     align-self: center;
     justify-self: center;
@@ -298,15 +288,19 @@ svg {
     grid-area: reg;
     align-self: center;
     justify-self: center;
-  }
+  } */
   .font-aws {
     grid-area: ico;
     align-self: center;
     justify-self: center;
+    display: flex;
   }
 }
 li {
   list-style: none;
+}
+.bottomlist {
+  text-align: center;
 }
 .font-aws i:nth-child(2) {
   padding: 0 2rem;

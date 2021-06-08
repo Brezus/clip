@@ -17,6 +17,20 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="clip.css" />
     <style>
+        ::-webkit-scrollbar {
+        width: 15px;
+      }
+      ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 10px rgba(128, 128, 128, 0.384);
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: var(--Strong-Cyan);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: hsl(171, 65%, 32%);
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -104,13 +118,15 @@
           <h2>Supercharge your workflow</h2>
         <p>We’ve got the tools to boost your productivity.</p>
       </div>
-        <div class="action__txt two"><i class="fas fa-scroll"></i>
+        <div class="action__txt two">
+          <i class="fas fa-scroll"></i>
         <h2>Create blacklists</h2>
         <p>
           Ensure sensitive information never makes its way to your clipboard by
           excluding certain sources.</p>
         </div>
-        <div class="action__txt three "><i class="fas fa-i-cursor"></i>
+        <div class="action__txt three ">
+          <i class="fas fa-i-cursor"></i>
         <h2>Plain text snippets</h2>
         <p>
           Remove unwanted formatting from copied text for a consistent look.
@@ -159,16 +175,19 @@
           />
         </g>
       </svg>
-      <div class="fir-li"> 
-        <li>FAQs</li>
-        <li>Contact Us</li>
-      </div>
-       <div class="sec-li"> 
-        <li>Privacy Policy</li>
-        <li>Press Kit</li>
+      <div class="bottomlist">
+        <div class="fir-li"> 
+          <li>FAQs</li>
+          <li>Contact Us</li>
+        </div>
+         <div class="sec-li"> 
+          <li>Privacy Policy</li>
+          <li>Press Kit</li>
+        </div>
+        <li class="reg">Install Guide</li>
       </div>
      
-      <li class="reg">Install Guide</li>
+      
       <div class="font-aws">
         <i class="fab fa-facebook-square"></i>
         <i class="fab fa-twitter"></i>
