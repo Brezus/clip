@@ -67,7 +67,7 @@ svg {
     margin: 0 auto;
     width: 100%;
     max-width: max-content;
-    grid-gap: 7rem;
+    grid-row: 7rem;
     text-align: center;
   }
 }
@@ -231,12 +231,35 @@ svg {
 @media screen and (min-width: 800px) {
   .logos {
     grid-template-columns: repeat(5, 1fr);
-    overflow: hidden;
+  }
+  .logos img {
+    max-width: 100%;
   }
 }
 .myfooter {
   background-color: hsla(212, 10%, 33%, 0.1);
   padding: 3.5rem 0;
+}
+@media screen and (min-width: 800px) {
+  .myfooter {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "svg fir sec reg ico";
+  }
+  svg {
+    grid-area: svg;
+  }
+  .fir-li {
+    grid-area: fir;
+  }
+  .sec-li {
+    grid-area: sec;
+  }
+  .reg {
+    grid-area: reg;
+  }
+  .font-aws {
+    grid-area: ico;
+  }
 }
 li {
   list-style: none;
@@ -251,4 +274,11 @@ li {
 /* space clipboard for ios and mac os from the last logo (vector graphics) */
 .ios-mac {
   margin-top: 5.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    position: relative;
+    right: 50%;
+  }
 }
