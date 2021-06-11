@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
 :root {
   --Strong-Cyan: hsl(171, 66%, 44%);
+  --Stronger-Cyan: hsl(171, 78%, 25%);
   --Light-Blue: hsl(233, 100%, 69%);
   --Dark-Grayish-Blue: hsl(210, 10%, 33%);
   --Grayish-Blue: hsl(201, 11%, 66%);
+  -o-transition: 200ms ease;
 }
 *,
 *::before,
@@ -19,7 +21,15 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 1.125rem;
+    font-family: "Bai Jamjuree", sans-serif;
+    background-image: url(bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 h1,
 h2,
 .font-aws i {
@@ -52,6 +62,7 @@ svg {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
 .grid {
   display: grid;
   padding: 8rem 0rem;
@@ -76,6 +87,12 @@ svg {
   display: grid;
   place-items: center;
   row-gap: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .top svg {
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+  }
 }
 .same {
   display: grid;
@@ -113,11 +130,16 @@ svg {
   color: white;
   padding: 1rem;
   border-radius: 50px;
+  transition: 200ms ease;
   box-shadow: 0px 3px 8px rgba(128, 128, 128, 0.452),
-    0px 1px 3px rgba(22, 22, 22, 1);
+    0px 1px 3px rgba(22, 22, 22, 0.637);
 }
 .download a:first-child {
   background-color: var(--Strong-Cyan);
+}
+.download a:first-child:hover {
+  box-shadow: 0px 3px 8px hsl(171, 66%, 44%),
+    0px 10px 12px rgba(38, 186, 164, 0.26);
 }
 @media screen and (min-width: 700px) {
   .download a:first-child {
@@ -126,6 +148,10 @@ svg {
 }
 .download a:last-child {
   background-color: var(--Light-Blue);
+}
+.download a:last-child:hover {
+  box-shadow: 0px 3px 8px hsla(233, 100%, 69%, 0.664),
+    0px 10px 12px hsla(233, 100%, 69%, 0.264);
 }
 @media screen and (min-width: 700px) {
   .download a:last-child {
@@ -171,7 +197,7 @@ svg {
 @media screen and (min-width: 700px) {
   .snippets img {
     margin-left: -9%;
-    width: 65%;
+    width: 60%;
   }
 }
 .access-clipboard img {
@@ -180,7 +206,11 @@ svg {
 }
 @media screen and (min-width: 700px) {
   .access-clipboard img {
-    width: 65%;
+    width: 60%;
+    margin-bottom: -5.8rem;
+  }
+  .access-clipboard p {
+    margin-bottom: 0.8rem;
   }
 }
 /* third section end */
@@ -190,6 +220,7 @@ svg {
   opacity: 40%;
   margin: 2.9rem 0;
 }
+
 /* grid for super charged workflow start */
 @media screen and (min-width: 700px) {
   .actions {
@@ -246,6 +277,7 @@ svg {
   display: grid;
   grid-gap: 5rem;
 }
+
 @media screen and (min-width: 800px) {
   .logos {
     grid-template-columns: repeat(5, 1fr);
@@ -262,9 +294,11 @@ svg {
 }
 @media screen and (min-width: 800px) {
   .myfooter {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 0 3rem;
-    grid-template-areas: "svg btm ico";
+    grid-template-areas:
+      "svg btm ico"
+      "... mid ...";
   }
   svg.bottom {
     grid-area: svg;
@@ -273,27 +307,31 @@ svg {
   }
   .bottomlist {
     grid-area: btm;
-    align-self: center;
-    justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0 4rem;
+    justify-items: center;
+    text-align: left;
   }
-  /* .sec-li {
-    grid-area: sec;
-    align-self: center;
-    justify-self: center;
+  .font-aws {
+    grid-area: ico;
   }
-  .reg {
-    grid-area: reg;
-    align-self: center;
-    justify-self: center;
-  } */
+
   .font-aws {
     grid-area: ico;
     align-self: center;
     justify-self: center;
     display: flex;
+  }
+  .fir-li,
+  .sec-li,
+  .reg {
+    text-align: left;
+  }
+  .sli:first-child + .sli {
+    padding-right: 1.5rem;
+  }
+  footer.mid {
+    grid-area: mid;
   }
 }
 li {
@@ -302,12 +340,26 @@ li {
 .bottomlist {
   text-align: center;
 }
+.bottomlist li {
+  opacity: 60%;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.bottomlist li:hover {
+  color: var(--Strong-Cyan);
+}
 .font-aws i:nth-child(2) {
   padding: 0 2rem;
 }
 .font-aws i {
   font-size: 2rem;
   margin-top: 1rem;
+  transform: rotate(0deg);
+  transition: 500ms ease;
+}
+.font-aws i:hover {
+  color: var(--Stronger-Cyan);
+  transform: rotate(-360deg);
 }
 /* space clipboard for ios and mac os from the last logo (vector graphics) */
 .ios-mac {
